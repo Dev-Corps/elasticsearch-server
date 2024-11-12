@@ -6,7 +6,7 @@ const http = require("https");
 // Test de connexion direct via api
 // const options = {
 //   "method": "GET",
-//   "hostname": "192.168.0.19",
+//   "hostname": "192.x.x.x",
 //   "port": "9200",
 //   "path": "/filebeat-8.14.3/_search",
 // };
@@ -14,12 +14,12 @@ const http = require("https");
 const { Client, BaseConnection } = require("@elastic/elasticsearch");
 const { ALL } = require("dns");
 const client = new Client({
-  node: "https://stagiaire:Police2405$@192.168.0.19:9200",
+  node: "https://username:password@192.x.x.x:9200",
   /**
    *  node: 'https://localhost:9200',
    * auth: {
-   *     username: 'stagiaire',
-   *     password: 'Police2405$'
+   *     username: 'username',
+   *     password: 'password'
    * }
    *
    */
