@@ -5,10 +5,10 @@ const https = require('https');
 const { Client } = require("@elastic/elasticsearch");
 
 const app = express();
-const url = 'https://172.27.28.14:9200/filebeat-8.15.0/_search';
+const url = 'https://172.x.x.x:9200/filebeat-8.15.0/_search';
 
 const client = new Client({
-  node: "https://stagiaire:Police2405$@192.168.0.19:9200",
+  node: "https://username: password@192.x.x.x:9200",
   tls: {
     ca: fs.readFileSync("./assets/http_ca.crt"),
     rejectUnauthorized: false,
@@ -37,8 +37,8 @@ fetch(url, {
   //agent: agent,
   httpsAgent: agent,
   auth: {
-    username: 'stagiaire',
-    password: 'Police2405$'
+    username: 'username',
+    password: 'Password'
   },
   tls: {
     ca: fs.readFileSync("./assets/http_ca.crt"),
